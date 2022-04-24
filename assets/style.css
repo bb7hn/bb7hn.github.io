@@ -81,6 +81,7 @@ body .container .list .list_item {
   text-align: center;
   text-shadow: rgba(255, 255, 255, 0.2509803922) -5px 5px 5px;
   box-shadow: rgba(32, 32, 48, 0.5019607843) -5px 5px 5px;
+  transition: border 1s;
 }
 body .container .list .list_item:hover {
   background: rgba(32, 32, 48, 0.95);
@@ -97,6 +98,9 @@ body .container .list .list_item:hover {
 .dark .container .title {
   color: #fff;
   text-shadow: rgba(255, 255, 255, 0.5) -5px 5px 5px;
+}
+.dark .container .list .list_item {
+  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 @-webkit-keyframes text_color {
