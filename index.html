@@ -8,7 +8,11 @@
     <title>Batuhan Ozen's Portfolio</title>
 </head>
 <body>
-    <a href="javascript:darkMode()" class="darkmode_btn"></a>
+    <div class="darkmode_container">
+        <a href="javascript:darkMode()" class="darkmode_btn"> 
+        </a>
+        <a href="javascript:darkMode()" id="darkmode_btn"></a>
+    </div>
     <div class="container col">
         <h1 class="title">Batuhan Ozen's Portfolio</h1>
         <div class="list row">
@@ -54,14 +58,20 @@
             if(getCookie("theme")=="dark"){
                 document.body.classList.remove("dark");
                 setCookie("theme","light",365);
+                document.getElementById("darkmode_btn").innerHTML = "Dark Theme";
             }
             else{
                 document.body.classList.add("dark");
                 setCookie("theme","dark",365);
+                document.getElementById("darkmode_btn").innerHTML = "Light Theme";
             }
         }
         if(getCookie("theme")=="dark"){
                 document.body.classList.add("dark");
+                document.getElementById("darkmode_btn").innerHTML = "Light Theme";
+        }
+        else{
+            document.getElementById("darkmode_btn").innerHTML = "Dark Theme";
         }
     </script>
 </body>

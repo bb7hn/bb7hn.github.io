@@ -14,20 +14,26 @@ body {
   height: 100%;
   transition: background 1s;
 }
-body .darkmode_btn {
+body .darkmode_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px auto 40px 40px;
+}
+body .darkmode_container .darkmode_btn {
+  display: flex;
+  flex-direction: row;
   background: url("./svg/moon.svg");
   background-size: cover;
   background-position: center;
-  display: flex;
   width: 40px;
   height: 40px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 10px;
-  right: 10px;
-  margin-left: auto;
-  margin-right: 20px;
-  margin: 10px auto 40px 40px;
+  min-width: 40px;
+  min-height: 40px;
+}
+body .darkmode_container #darkmode_btn {
+  color: #000;
+  margin-left: 4px;
 }
 body .col {
   display: flex;
@@ -38,7 +44,7 @@ body .row {
   flex-direction: row;
 }
 body .container {
-  margin: auto;
+  margin: 14px auto auto auto;
   width: 37.5%;
 }
 body .container .title {
@@ -53,6 +59,7 @@ body .container .title {
       -ms-user-select: none;
           user-select: none;
   transition: color 1s;
+  text-align: center;
 }
 body .container .list {
   font-family: "Fira Sans Extra Condensed", sans-serif;
@@ -92,8 +99,11 @@ body .container .list .list_item:hover {
 .dark {
   background: #14141b;
 }
-.dark .darkmode_btn {
+.dark .darkmode_container .darkmode_btn {
   background: url("./svg/sun.svg");
+}
+.dark .darkmode_container #darkmode_btn {
+  color: #fff;
 }
 .dark .container .title {
   color: #fff;
@@ -120,5 +130,44 @@ body .container .list .list_item:hover {
   100% {
     color: #0649ad;
     text-shadow: rgba(12, 96, 223, 0.2509803922) -5px 5px 5px;
+  }
+}
+@media only screen and (max-width: 870px) and (min-width: 550px) {
+  body .container {
+    width: 60%;
+  }
+  body .container .list {
+    flex-direction: row;
+  }
+}
+@media only screen and (max-width: 549px) and (min-width: 480px) {
+  body .container {
+    width: 80%;
+  }
+  body .container .list {
+    flex-direction: row;
+  }
+}
+@media only screen and (max-width: 500px) {
+  body .darkmode_btn {
+    margin: 10px auto 0px auto;
+  }
+}
+@media only screen and (max-width: 480px) {
+  body .container {
+    width: 100%;
+  }
+  body .container .list {
+    flex-direction: row;
+  }
+}
+@media only screen and (max-width: 335px) {
+  body .container {
+    width: 100%;
+    align-items: center;
+  }
+  body .container .list {
+    flex-direction: column;
+    margin: 0 10px 0 10px;
   }
 }/*# sourceMappingURL=style.css.map */
