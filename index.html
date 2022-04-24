@@ -1,1 +1,68 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Batuhan Ozen's Portfolio</title>
+</head>
+<body>
+    <a href="javascript:darkMode()" class="darkmode_btn"></a>
+    <div class="container col">
+        <h1 class="title">Batuhan Ozen's Portfolio</h1>
+        <div class="list row">
+            <a target="_blank" class="list_item row" href="https://bb7hn.github.io/Frontend/Billing Page"><span>Billing Page</span></a>
+            <a target="_blank" class="list_item row" href="https://bb7hn.github.io/Frontend/Blog Post"><span>Blog Post</span></a>
+            <a target="_blank" class="list_item row" href="https://bb7hn.github.io/Frontend/Booking Modal"><span>Booking Modal</span></a>
+            <a target="_blank" class="list_item row" href="https://bb7hn.github.io/Frontend/Browse page"><span>Browse page</span></a>
+            <a target="_blank" class="list_item row" href="https://bb7hn.github.io/Frontend/Cards List UI Design"><span>Cards List UI Design</span></a>
+            <a target="_blank" class="list_item row" href="https://bb7hn.github.io/Frontend/Gallery"><span>Gallery</span></a>
+            <a target="_blank" class="list_item row" href="https://bb7hn.github.io/Frontend/Log In"><span>Log In</span></a>
+            <a target="_blank" class="list_item row" href="https://bb7hn.github.io/Frontend/Music App"><span>Music App</span></a>
+            <a target="_blank" class="list_item row" href="https://bb7hn.github.io/Frontend/Notifications"><span>Notifications</span></a>
+            <a target="_blank" class="list_item row" href="https://bb7hn.github.io/Frontend/Pricing Cards"><span>Pricing Cards</span></a>
+            <a target="_blank" class="list_item row" href="https://bb7hn.github.io/Frontend/Sign Up"><span>Sign Up</span></a>
+            <a target="_blank" class="list_item row" href="https://bb7hn.github.io/Frontend/UI Component"><span>UI Component</span></a>
+            <a target="_blank" class="list_item row" href="https://bb7hn.github.io/Frontend/Video Player"><span>Video Player</span></a>
+            <a target="_blank" class="list_item row" href="https://bb7hn.github.io/Frontend/Webshop Components"><span>Webshop Components</span></a>
+        </div>
+    </div>
+    <script>
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires="+d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+            let name = cname + "=";
+            let ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        function darkMode(){
+            if(getCookie("theme")=="dark"){
+                document.body.classList.remove("dark");
+                setCookie("theme","light",365);
+            }
+            else{
+                document.body.classList.add("dark");
+                setCookie("theme","dark",365);
+            }
+        }
+        if(getCookie("theme")=="dark"){
+                document.body.classList.add("dark");
+        }
+    </script>
+</body>
+</html>
