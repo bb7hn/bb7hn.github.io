@@ -149,7 +149,7 @@ body .container .list .list_item:hover {
   }
 }
 @media only screen and (max-width: 500px) {
-  body .darkmode_btn {
+  body .darkmode_container {
     margin: 10px auto 0px auto;
   }
 }
