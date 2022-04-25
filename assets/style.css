@@ -18,7 +18,7 @@ body .darkmode_container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 10px auto 0px auto;
+  margin: auto auto 0px auto;
 }
 body .darkmode_container .darkmode_btn {
   display: flex;
