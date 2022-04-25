@@ -18,7 +18,7 @@ body .darkmode_container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 10px auto 40px 40px;
+  margin: 10px auto 0px auto;
 }
 body .darkmode_container .darkmode_btn {
   display: flex;
@@ -65,6 +65,7 @@ body .container .list {
   font-family: "Fira Sans Extra Condensed", sans-serif;
   font-size: 18px;
   flex-wrap: wrap;
+  width: 320px;
   margin: auto;
   justify-content: center;
 }
@@ -212,5 +213,9 @@ body .footer .link:hover::after {
   body .container .list {
     flex-direction: column;
     margin: 0 10px 0 10px;
+  }
+  body .container .list .list_item {
+    margin-left: auto;
+    margin-right: auto;
   }
 }/*# sourceMappingURL=style.css.map */
