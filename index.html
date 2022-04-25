@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
+    <script src="./assets/js/index.js"></script>
     <title>Batuhan Ozen's Portfolio</title>
 </head>
 <body>
@@ -26,47 +27,16 @@
             <a target="_blank" class="list_item row" href="https://bb7hn.github.io/Frontend/Video Player"><span>Video Player</span></a>
         </div>
     </div>
-    <script>
-        function setCookie(cname, cvalue, exdays) {
-            const d = new Date();
-            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-            let expires = "expires="+d.toUTCString();
-            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-        }
-
-        function getCookie(cname) {
-            let name = cname + "=";
-            let ca = document.cookie.split(';');
-            for(let i = 0; i < ca.length; i++) {
-                let c = ca[i];
-                while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-                }
-                if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
-                }
-            }
-            return "";
-        }
-        function darkMode(){
-            if(getCookie("theme")=="dark"){
-                document.body.classList.remove("dark");
-                setCookie("theme","light",365);
-                document.getElementById("darkmode_btn").innerHTML = "Dark Theme";
-            }
-            else{
-                document.body.classList.add("dark");
-                setCookie("theme","dark",365);
-                document.getElementById("darkmode_btn").innerHTML = "Light Theme";
-            }
-        }
-        if(getCookie("theme")=="dark"){
-                document.body.classList.add("dark");
-                document.getElementById("darkmode_btn").innerHTML = "Light Theme";
-        }
-        else{
-            document.getElementById("darkmode_btn").innerHTML = "Dark Theme";
-        }
-    </script>
+    <div class="footer row">
+        <a href="//batuhanozen.com" class="link">My Website</a>
+        <a href="//batuhanozen.com/Resume_Batuhan_Ozen.pdf" target="_blank" class="link">My Resumé</a>
+        <a href="https://github.com/bb7hn" class="link">Github Account</a>
+    </div>
+    <script>if (getCookie("theme") == "dark") {
+        document.body.classList.add("dark");
+        document.getElementById("darkmode_btn").innerHTML = "Light Theme";
+      } else {
+        document.getElementById("darkmode_btn").innerHTML = "Dark Theme";
+      }</script>
 </body>
 </html>
