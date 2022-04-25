@@ -103,6 +103,7 @@ body{
         font-family: 'Exo 2', sans-serif;
         margin: auto 10px;
         color: #fff;
+        text-shadow: rgb(255 255 255 / 25%) -5px 5px 5px;;
         &::after{
           content: '';
           display: flex;
@@ -215,6 +216,12 @@ body{
               margin-right:auto ;
             }
           }
+      }
+      .footer{
+        flex-direction: column;
+        .link{
+          margin: 5px auto;
+        }
       }
     }
   }

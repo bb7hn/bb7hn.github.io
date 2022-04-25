@@ -110,6 +110,7 @@ body .footer .link {
   font-family: "Exo 2", sans-serif;
   margin: auto 10px;
   color: #fff;
+  text-shadow: rgba(255, 255, 255, 0.25) -5px 5px 5px;
 }
 body .footer .link::after {
   content: "";
@@ -217,5 +218,11 @@ body .footer .link:hover::after {
   body .container .list .list_item {
     margin-left: auto;
     margin-right: auto;
+  }
+  body .footer {
+    flex-direction: column;
+  }
+  body .footer .link {
+    margin: 5px auto;
   }
 }/*# sourceMappingURL=style.css.map */
